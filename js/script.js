@@ -1,3 +1,29 @@
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+
+
+
+rock.addEventListener('click', function() {
+  let playerSelection = rock.getAttribute("id");
+  let computerChoice = getComputerChoice();
+  rpsRound(playerSelection, computerChoice);
+
+});
+  
+paper.addEventListener('click', function() {
+  let playerSelection = paper.getAttribute("id");
+  let computerChoice = getComputerChoice();
+  rpsRound(playerSelection, computerChoice);
+});
+
+scissors.addEventListener('click', function() {
+  let playerSelection = scissors.getAttribute("id");
+  let computerChoice = getComputerChoice();
+  rpsRound(playerSelection, computerChoice);
+});
+
+
 function getComputerChoice() {
   let randomNumber = Math.floor(Math.random() * 3 + 1);
   let computerChoice =
@@ -5,13 +31,13 @@ function getComputerChoice() {
   return computerChoice;
 }
 
-function convertToLowerCase(userInput) {
-  var result = userInput.toLowerCase();
-  return result;
-}
+// function convertToLowerCase(userInput) {
+//   var result = userInput.toLowerCase();
+//   return result;
+// }
 
 function rpsRound(playerSelection, computerChoice) {
-  playerSelection = convertToLowerCase(playerSelection);
+  // playerSelection = convertToLowerCase(playerSelection);
 
   let winner =
     playerSelection === computerChoice
@@ -29,12 +55,12 @@ function rpsRound(playerSelection, computerChoice) {
 }
 
 function game() {
-  confirm("Let's play Rock Paper Scissors for 5 rounds.");
+  // confirm("Let's play Rock Paper Scissors for 5 rounds.");
   for (let i = 0; i < 5; i++) {
     let computerChoice = getComputerChoice();
-    let playerSelection = prompt("Enter rock, paper or scissors.");
-    rpsRound(playerSelection, computerChoice);
+    // let playerSelection = rock.getAttribute("id");
+    // rpsRound(playerSelection, computerChoice);
   }
 }
 
-game();
+// game();

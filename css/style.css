@@ -26,7 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 input, button, textarea, select {
@@ -43,4 +43,34 @@ img {
   height: auto;
 }
 
+.button-container {
+  display: flex;
+  gap: 50px;
+}
 
+.btn {
+  flex: 1;
+  transition: box-shadow background-color .2s linear;
+  /* background: none; */
+  font-size: 1.2rem;
+  padding: .5rem;
+  background-color: white;
+  color: green;
+  border: green solid 2px;
+
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px rgb(233, 254, 70);
+
+}
+
+.btn:hover {
+  background-color: green;
+  color: white;
+}
+
+.btn:active {
+  box-shadow: 3px 3px 10px rgb(233, 254, 70);
+
+
+
+}
