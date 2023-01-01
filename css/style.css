@@ -5,18 +5,17 @@
   list-style: none;
 }
 
-*::before, *::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 :root {
-
 }
 
 html {
   height: 100%;
   font-family: "Monserrat", sans-serif;
-
 }
 
 body {
@@ -26,14 +25,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
   /* justify-content: center; */
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -50,27 +59,60 @@ img {
 
 .btn {
   flex: 1;
-  transition: box-shadow background-color .2s linear;
+  transition: box-shadow background-color 0.2s linear;
   /* background: none; */
   font-size: 1.2rem;
-  padding: .5rem;
-  background-color: white;
-  color: green;
-  border: green solid 2px;
+  padding: 0.5rem;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 121, 9, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: rgb(3, 255, 3);
+  border: 2px solid green;
 
   border-radius: 10px;
   box-shadow: 2px 2px 3px rgb(233, 254, 70);
-
 }
 
 .btn:hover {
   background-color: green;
   color: white;
+  text-shadow: 2px 2px 3px rgb(37, 244, 18);
 }
 
 .btn:active {
   box-shadow: 3px 3px 10px rgb(233, 254, 70);
+  border-bottom: 2px solid rgb(251, 248, 53);
+}
+table {
+  margin-top: 2rem;
+  text-align: center;
+}
 
+th,
+td {
+  padding: 5px;
+  border: 1px solid white;
+}
 
+td {
+  border: 1px solid white;
+  padding: 1rem;
+  line-height: 1rem;
+}
 
+/* td {
+  line-height: 16px;
+} */
+
+#feedback-div {
+  color: white;
+  width: 280px;
+}
+
+#feedback-div2 {
+  color: rgb(233, 65, 65);
+  width: 280px;
 }
