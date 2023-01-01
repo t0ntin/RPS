@@ -57,7 +57,7 @@ function playRound(playerSelection, computerChoice) {
   //     "Thanks for playing. Refresh the page to play again.";
   // }
 
-  // determineAndAnnounceWinner();
+  determineAndAnnounceWinner();
 }
 
 function rpsRound(playerSelection, computerChoice) {
@@ -111,12 +111,12 @@ function updateResultTable(playerSelection, computerChoice) {
   }
 }
 
-// function determineAndAnnounceWinner() {
-//   if (results.roundsPlayed.score === 5) {
-//     if (results.yourResults.score > results.computerResults.score) {
-//       feedbackDiv2.innerText = "You beat the computer. Congrats!";
-//     } else {
-//       feedbackDiv2.innerText = "Sorry. The computer wins.";
-//     }
-//   }
-// }
+function determineAndAnnounceWinner() {
+  if (results.roundsPlayed.score === 5) {
+    if (results.yourResults.score > results.computerResults.score) {
+      feedbackDiv2.innerText = "You beat the computer. Congrats!";
+    } else {
+      feedbackDiv2.innerText = "Sorry. The computer wins.";
+    }
+  }
+}
