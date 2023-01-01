@@ -49,14 +49,15 @@ function getComputerChoice() {
 function playRound(playerSelection, computerChoice) {
   let winner = rpsRound(playerSelection, computerChoice);
   updateResultTable(playerSelection, computerChoice);
-  if (results.roundsPlayed.score >= 5) {
-    rock.disabled = true;
-    paper.disabled = true;
-    scissors.disabled = true;
-    feedbackDiv.innerText =
-      "Thanks for playing. Refresh the page to play again.";
-  }
-  determineAndAnnounceWinner();
+  // if (results.roundsPlayed.score >= 5) {
+  //   rock.disabled = true;
+  //   paper.disabled = true;
+  //   scissors.disabled = true;
+  //   feedbackDiv.innerText =
+  //     "Thanks for playing. Refresh the page to play again.";
+  // }
+
+  // determineAndAnnounceWinner();
 }
 
 function rpsRound(playerSelection, computerChoice) {
@@ -110,12 +111,12 @@ function updateResultTable(playerSelection, computerChoice) {
   }
 }
 
-function determineAndAnnounceWinner() {
-  if (results.roundsPlayed.score === 5) {
-    if (results.yourResults.score > results.computerResults.score) {
-      feedbackDiv2.innerText = "You beat the computer. Congrats!";
-    } else {
-      feedbackDiv2.innerText = "Sorry. The computer wins.";
-    }
-  }
-}
+// function determineAndAnnounceWinner() {
+//   if (results.roundsPlayed.score === 5) {
+//     if (results.yourResults.score > results.computerResults.score) {
+//       feedbackDiv2.innerText = "You beat the computer. Congrats!";
+//     } else {
+//       feedbackDiv2.innerText = "Sorry. The computer wins.";
+//     }
+//   }
+// }
